@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.12.0.schema.json
+
+PackageIdentifier: SkarnSecurity.Skarn
+PackageVersion: 0.33.0
+PackageLocale: en-US
+Publisher: Skarn Security
+PublisherUrl: https://getskarn.com
+PublisherSupportUrl: https://getskarn.com
+PrivacyUrl: https://getskarn.com/privacy/
+PackageName: Skarn
+PackageUrl: https://getskarn.com
+License: Proprietary
+LicenseUrl: https://getskarn.com/terms/
+Copyright: Copyright (c) 2026 Skarn Software OÜ
+CopyrightUrl: https://getskarn.com/terms/
+ShortDescription: AI coding session security scanner with built-in session search
+Description: |-
+  Skarn scans the sessions your AI coding assistants leave on disk for leaked
+  credentials and for the attack patterns that cause or exploit them, across
+  Claude Code, Codex CLI, Cursor, Copilot, Gemini CLI, Kimi Code CLI, and Grok
+  Build. The same engine also searches, browses, and analyzes those sessions, so
+  the tool you audit with is the tool you use daily.
+
+  One self-contained executable with no runtime dependencies. Sessions are read
+  and scanned on the machine they live on, and nothing leaves it by default:
+  the only network calls Skarn ever makes are the ones you type.
+
+  Findings carry a MITRE ATLAS, OWASP LLM Top 10, and CWE crosswalk, a session
+  risk score for CI gating, and SARIF or NDJSON output for a code-scanning or
+  SIEM pipeline. Secrets are masked in every output format. A real-time guard
+  hook can inspect an agent's tool calls before they run.
+Moniker: skarn
+Tags:
+- ai
+- claude-code
+- cli
+- codex
+- copilot
+- cursor
+- devsecops
+- scanner
+- secrets
+- security
+Documentations:
+- DocumentLabel: Manual
+  DocumentUrl: https://getskarn.com/manual/
+ReleaseNotesUrl: https://github.com/skarn-security/skarn-dist/releases/tag/v0.33.0
+InstallationNotes: |-
+  Run `skarn assess` for a first scan of this machine. `skarn check` needs a
+  license: register at https://getskarn.com/free, then install it with
+  `skarn license <path>`. `skarn setup` wires the real-time guard into the AI
+  coding agents it finds, and `skarn doctor` verifies the wiring.
+ManifestType: defaultLocale
+ManifestVersion: 1.12.0

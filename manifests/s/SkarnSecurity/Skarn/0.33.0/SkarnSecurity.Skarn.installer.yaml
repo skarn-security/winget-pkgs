@@ -1,0 +1,17 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.installer.1.12.0.schema.json
+
+PackageIdentifier: SkarnSecurity.Skarn
+PackageVersion: 0.33.0
+InstallerType: portable
+Commands:
+- skarn
+ReleaseDate: 2026-10-04
+Installers:
+- Architecture: x64
+  InstallerUrl: https://github.com/skarn-security/skarn-dist/releases/download/v0.33.0/skarn-x86_64-windows.exe
+  InstallerSha256: F36E08D17A6BC0F8701AF4CBD082C1AE2BE9379812FA145C4374227A9E452657
+- Architecture: arm64
+  InstallerUrl: https://github.com/skarn-security/skarn-dist/releases/download/v0.33.0/skarn-aarch64-windows.exe
+  InstallerSha256: 330FB7C166852D04CA4F21519151E2702503170218C2AA2C09969807AEF97EC1
+ManifestType: installer
+ManifestVersion: 1.12.0
